@@ -23,7 +23,7 @@ const ItemEdit = () => {
     <>
       {item ? (
         <>
-          <h2>ItemEdit #{id}</h2>
+          <h2 className="display-5 my-4 ms-5">Editar Orden</h2>
           <ItemForm data={item} itemId={id}/>
         </>
       ) : ''}

@@ -58,131 +58,145 @@ const ItemForm = ({ data, itemId}) => {
   
   return(
     <>
-      <form className="form" onSubmit={handleSubmit(customSubmit)}>
-          <div className="form__item">
-              <label>Nombre destinatario</label>
-              <input className="form-control"
-                  {...register("NombreD", { required: true })}
-                  aria-invalid={errors.NombreD ? "true" : "false"}
-              />
-              {errors.NombreD && <p>Revisa el campo</p>}
+      <form className="px-5" onSubmit={handleSubmit(customSubmit)}>
+        <div className="row my-3">
+            <div className="col">
+                <label>Nombre destinatario</label>
+                <input className="form-control"
+                    {...register("NombreD", { required: true })}
+                    aria-invalid={errors.NombreD ? "true" : "false"}
+                />
+                {errors.NombreD && <p>Revisa el campo</p>}
+            </div>  
+            
+            <div className="col">
+                <label>Cédula/Nit destinatario</label>
+                <input className="form-control"
+                    type="number"
+                    {...register("Cedula", { required: true})}
+                    aria-invalid={errors.Cedula ? "true" : "false"}
+                />
+                {errors.Cedula && <p>Revisa el campo</p>}
+            </div>
+        </div>
+
+          <div className="row my-3">
+            <div className="col">
+                <label>Ciudad entrega</label>
+                <input className="form-control"
+                    {...register("CiudadE", { required: true })}
+                    aria-invalid={errors.CiudadE ? "true" : "false"}
+                />
+                {errors.CiudadE && <p>Field required</p>}
+            </div>
+            
+            <div className="col">
+                <label>Direccion entrega</label>
+                <input className="form-control"
+                    {...register("AddE", { required: true })}
+                    aria-invalid={errors.AddE ? "true" : "false"}
+                />
+                {errors.AddE && <p>Field required</p>}
+            </div> 
+          </div>
+
+          <div className="row my-3">
+            <div className="col">
+                <label>Ciudad recogida</label>
+                <input className="form-control"
+                    {...register("CiudadR", { required: true })}
+                    aria-invalid={errors.CiudadR ? "true" : "false"}
+                />
+                {errors.CiudadR && <p>Field required</p>}
+            </div>
+            
+            <div className="col">
+                <label>Direccion recogida</label>
+                <input className="form-control"
+                    {...register("AddR", { required: true })}
+                    aria-invalid={errors.AddR ? "true" : "false"}
+                />
+                {errors.AddR && <p>Field required</p>}
+            </div>
           </div>  
 
-          <div className="form__item">
-              <label>Cédula/Nit destinatario</label>
-              <input className="form-control"
-                  type="number"
-                  {...register("Cedula", { required: true})}
-                  aria-invalid={errors.Cedula ? "true" : "false"}
-              />
-              {errors.Cedula && <p>Revisa el campo</p>}
+          <div className="row my-3">
+            <div className="col">
+                <label>Estado</label>
+                <input className="form-control"
+                    {...register("State", { required: true })}
+                    aria-invalid={errors.State ? "true" : "false"}
+                />
+                {errors.State && <p>Field required</p>}
+            </div>
+
+          
+            <div className="col">
+                <label>Hora</label>
+                <input className="form-control"
+                    {...register("Hora", { required: true})}
+                    aria-invalid={errors.Hora ? "true" : "false"}
+                />
+                {errors.Hora && <p>Min 868. Max 2022</p>}
+            </div>  
+            
+            <div className="col">
+                <label>Fecha</label>
+                <input className="form-control"
+                    type="date"
+                    {...register("Fecha", { required: true})}
+                    aria-invalid={errors.Fecha ? "true" : "false"}
+                />
+                {errors.Fecha && <p>Field required</p>}
+            </div>
           </div>
 
-          <div className="form__item">
-              <label>Ciudad entrega</label>
-              <input className="form-control"
-                  {...register("CiudadE", { required: true })}
-                  aria-invalid={errors.CiudadE ? "true" : "false"}
-              />
-              {errors.CiudadE && <p>Field required</p>}
+          <div className="row my-3">
+            <div className="col">
+                <label>Largo</label>
+                <input className="form-control"
+                    type="number"
+                    {...register("Largo", { required: true})}
+                    aria-invalid={errors.Largo ? "true" : "false"}
+                />
+                {errors.Largo && <p>Min 868. Max 2022</p>}
+            </div>
+            
+            <div className="col">
+                <label>Ancho</label>
+                <input className="form-control"
+                    type="number"
+                    {...register("Ancho", { required: true})}
+                    aria-invalid={errors.Ancho ? "true" : "false"}
+                />
+                {errors.Ancho && <p>Min 868. Max 2022</p>}
+            </div>
+            
+            <div className="col">
+                <label>Alto</label>
+                <input className="form-control"
+                    type="number"
+                    {...register("Alto", { required: true})}
+                    aria-invalid={errors.Alto ? "true" : "false"}
+                />
+                {errors.Alto && <p>Min 868. Max 2022</p>}
+            </div>
+            
+            <div className="col">
+                <label>Peso</label>
+                <input className="form-control"
+                    type="number"
+                    {...register("Peso", { required: true})}
+                    aria-invalid={errors.Peso ? "true" : "false"}
+                />
+                {errors.Peso && <p>Min 868. Max 2022</p>}
+            </div>
           </div>
 
-          <div className="form__item">
-              <label>Direccion entrega</label>
-              <input className="form-control"
-                  {...register("AddE", { required: true })}
-                  aria-invalid={errors.AddE ? "true" : "false"}
-              />
-              {errors.AddE && <p>Field required</p>}
-          </div> 
-
-          <div className="form__item">
-              <label>Ciudad recogida</label>
-              <input className="form-control"
-                  {...register("CiudadR", { required: true })}
-                  aria-invalid={errors.CiudadR ? "true" : "false"}
-              />
-              {errors.CiudadR && <p>Field required</p>}
+          <div className="row my-5">
+            <input type="submit" className={isEdit ? "btn btn-success col-2 mx-auto p-2" : "btn btn-primary col-2 mx-auto p-2"} value={isEdit ? "Editar" : "Crear"} />
           </div>
-
-          <div className="form__item">
-              <label>Direccion recogida</label>
-              <input className="form-control"
-                  {...register("AddR", { required: true })}
-                  aria-invalid={errors.AddR ? "true" : "false"}
-              />
-              {errors.AddR && <p>Field required</p>}
-          </div>  
-
-          <div className="form__item">
-              <label>Estado</label>
-              <input className="form-control"
-                  {...register("State", { required: true })}
-                  aria-invalid={errors.State ? "true" : "false"}
-              />
-              {errors.State && <p>Field required</p>}
-          </div>
-
-          <div className="form__item">
-              <label>Hora</label>
-              <input className="form-control"
-                  {...register("Hora", { required: true})}
-                  aria-invalid={errors.Hora ? "true" : "false"}
-              />
-              {errors.Hora && <p>Min 868. Max 2022</p>}
-          </div>  
-
-          <div className="form__item">
-              <label>Fecha</label>
-              <input className="form-control"
-                  type="date"
-                  {...register("Fecha", { required: true})}
-                  aria-invalid={errors.Fecha ? "true" : "false"}
-              />
-              {errors.Fecha && <p>Field required</p>}
-          </div>
-
-          <div className="form__item">
-              <label>Largo</label>
-              <input className="form-control"
-                  type="number"
-                  {...register("Largo", { required: true})}
-                  aria-invalid={errors.Largo ? "true" : "false"}
-              />
-              {errors.Largo && <p>Min 868. Max 2022</p>}
-          </div>
-
-          <div className="form__item">
-              <label>Ancho</label>
-              <input className="form-control"
-                  type="number"
-                  {...register("Ancho", { required: true})}
-                  aria-invalid={errors.Ancho ? "true" : "false"}
-              />
-              {errors.Ancho && <p>Min 868. Max 2022</p>}
-          </div>
-
-          <div className="form__item">
-              <label>Alto</label>
-              <input className="form-control"
-                  type="number"
-                  {...register("Alto", { required: true})}
-                  aria-invalid={errors.Alto ? "true" : "false"}
-              />
-              {errors.Alto && <p>Min 868. Max 2022</p>}
-          </div>
-
-          <div className="form__item">
-              <label>Peso</label>
-              <input className="form-control"
-                  type="number"
-                  {...register("Peso", { required: true})}
-                  aria-invalid={errors.Peso ? "true" : "false"}
-              />
-              {errors.Peso && <p>Min 868. Max 2022</p>}
-          </div>
-
-          <input type="submit" className="btn btn-primary" value={isEdit ? "Edit" : "Create"} />
+          
       </form>
     </>
   );

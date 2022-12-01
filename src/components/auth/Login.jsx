@@ -6,7 +6,7 @@ const Login = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const customSubmit = (data) => {console.log(data);};
     return (
-        <form className="form" onSubmit={handleSubmit(customSubmit)}>
+        <form onSubmit={handleSubmit(customSubmit)}>
             <div className="form__item">
                 <label>Nombre</label>
                 <input 

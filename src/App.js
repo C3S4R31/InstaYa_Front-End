@@ -20,6 +20,13 @@ function App() {
           <Route path="/new" element={<ItemNew />} />
         </Routes>
       </div>
+      <footer className="py-4 bg-light mt-auto">
+      <div className="container-fluid px-4">
+        <div className="d-flex align-items-center justify-content-center small">
+          <div className="text-muted">Copyright &copy; InstaYA 2022</div>
+        </div>
+      </div>
+    </footer>
     </BrowserRouter>
   );
 }

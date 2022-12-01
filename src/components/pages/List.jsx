@@ -63,8 +63,8 @@ const List = () => {
                   <td>{item.addE}</td>
                   <td>{item.state}</td>
                   <td className="d-flex gap-2 justify-content-center">
-                    <Link className="btn btn-success" to={"/" + item._id + "/edit"}>Edit</Link>
-                    <a className="btn btn-danger" onClick={() => handleDelete(item._id)}>Delete</a>
+                    <Link className="btn btn-success" to={"/" + item._id + "/edit"}>Editar</Link>
+                    <a className="btn btn-danger" onClick={() => handleDelete(item._id)}>Borrar</a>
                   </td>
                 </tr>
               );
