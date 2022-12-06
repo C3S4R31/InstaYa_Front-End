@@ -10,7 +10,7 @@ const ItemEdit = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/items/" + id)
+      .get("https://instayaback-end-production.up.railway.app/items/" + id)
       .then((response) => {
         console.log(response.data)
         const fechaFormat = response.data.fecha;

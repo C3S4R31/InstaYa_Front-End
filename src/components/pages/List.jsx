@@ -20,7 +20,7 @@ const List = () => {
   useEffect(() => {
     const userId = "6387bf36ac8a8fcbd67ef28c"
     axios
-      .get("http://localhost:5000/items?userId=" + userId)
+      .get("https://instayaback-end-production.up.railway.app/items?userId=" + userId)
       .then(result => {
         console.log(result.data);
         setItems(result.data);
@@ -31,7 +31,7 @@ const List = () => {
 
   const handleDelete = (itemId) => {
     axios
-      .delete("http://localhost:5000/items/delete/" + itemId)
+      .delete("https://instayaback-end-production.up.railway.app/items/delete/" + itemId)
       .then(response => {
         console.log(response.data)
         setUpdate(!update)

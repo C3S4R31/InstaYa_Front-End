@@ -25,12 +25,12 @@ const ItemForm = ({ data, itemId}) => {
     }
     if (isEdit){
         axios
-            .put("http://localhost:5000/items/edit/" + itemId, itemObject)
+            .put("https://instayaback-end-production.up.railway.app/items/edit/" + itemId, itemObject)
             .then(response => console.log(response)) 
                 
     }else{
         axios
-        .post("http://localhost:5000/items/create", itemObject)
+        .post("https://instayaback-end-production.up.railway.app/items/create", itemObject)
         .then(response => console.log(response))             
     }
     
